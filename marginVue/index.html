@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>MarginVUE - The Simple Money Visualization Resource</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="http://www.marginvue.com/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://www.marginvue.com/css/bootstrap-responsive.min.css" rel="stylesheet">
+<!-- Other CSS Imports -->
+<link href='http://www.marginvue.com/css/mystyle.css' media= 'all' rel='stylesheet' type='text/css' >
+<link href='http://fonts.googleapis.com/css?family=Maven+Pro:500|Julius+Sans+One|EB+Garamond' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="jquery.js"></script>
+<script src="jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript">
+$(function() {
+	$("#who").popover();
+	$("#what").popover();
+	$("#why").popover();
+	$("#how").popover();
+});
+</script>
+<script type="text/javascript">
+$(function() {
+	$("#portfolioInfo").popover();
+	$("#equityInfo").popover();
+	$(".span12").affix();
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+	function imageResize() {
+		var contentWidth = body.width();
+		if (contentWidth < 700) {
+			$(body).attr('background-image','smallscreen.jpg');
+		} else {
+			$(body).attr('background-image','thevue.jpg');
+		}
+	}
+	
+	imageResize();
+	$(window).bind("resize", function(){//Adjusts image when browser resized
+	imageResize();
+});
+});
+</script>
+<style type='text/css'>
+#sidebar, #big_banner {
+	margin-top: 55px;
+}
+#big_banner {
+	position: relative;
+	margin-bottom: 50px;
+	height: 40em;
+	text-align:center;
+	padding: 0px 20px;
+    padding-top: 0px;
+    padding-right-value: 20px;
+    padding-bottom: 0px;
+    padding-left-value: 20px;
+    padding-left-ltr-source: physical;
+    padding-left-rtl-source: physical;
+    padding-right-ltr-source: physical;
+    padding-right-rtl-source: physical;
+	background-size: 100% 175%;
+}
+#banner_text {
+	padding-top:110px;
+}
+#banner_text h1 {
+	font-size: 110px;
+	letter-spacing: -10px;
+	line-height: 2;
+}
+#banner_text p {
+	font-family: "Julius Sans One";
+	font-weight: 400;
+}
+#info_buttons {
+	padding-top: 20px;
+}
+.btn {
+	color: #595959;
+}
+body {
+	background:url(thevue.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="row">
+    <div class="span12">
+      <nav class="navbar">
+        <div class="navbar-inner"> <a href="http://www.marginvue.com/index.html" class="brand">MarginVUE</a> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li> <a href="http://www.marginvue.com/index.html"><i class="icon-home"> </i> home</a> </li>
+              <li class="divider-vertical"></li>
+              <li> <a href="http://www.marginvue.com/portfolioview.html"><i class="icon-briefcase"> </i> portfolio demo</a> </li>
+              <li class="divider-vertical"></li>
+              <li> <a href="http://www.marginvue.com/about.html"><i class="icon-info-sign"> </i> about</a> </li>
+              <li class="divider-vertical"></li>
+              <li> <a href="http://www.marginvue.com/contact.html"><i class="icon-user"> </i> contact</a> </li>
+              <li class="divider-vertical"></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  </div>
+  <!-- end of header-->
+  <div class="row" id="main-content">
+    <div class="jumbotron masthead" id="big_banner">
+      <div class="container" id="banner_text">
+        <h1> MarginVUE </h1>
+        <p> Welcome to this portfolio visualization website. Several of the intuitive functions in the portfolio demo alllow the user to 
+          understand the nature, composition and performance of the portfolio. While currently accounts cannot be created, we hope that you enjoy
+          the demo that can be found here! </p>
+        <a class="btn btn-info btn-large" href="portfolioview.html"> Portfolio Demo </a>
+        <br>
+            <div class="btn-group" id="info_buttons">
+    <button class="btn btn-inverse btn-large" type="button" id="who" data-content="Stanford University / Class of 2016 / Computer Science" data-placement="top" data-toggle"popover" href="#" data-original-title="Rotimi Opeke" data-animation="true" data-trigger="hover" >Who?</button>
+    <button class="btn btn-inverse btn-large" id="what" data-content="This was a project created to help me follow how my money was moving in the markets without
+              entering my brokerage account everytime. Apps on the mobile devices were quite handy, but I wanted
+              to see if I could incorporate my finance and the news that was being broadcasted about
+              these companies." data-placement="top" data-toggle"popover" href="#" data-original-title="Pertinence" data-animation="true" data-trigger="hover" >What?</button>
+    <button class="btn btn-inverse btn-large" id="why" data-content="It has bcome a good way to practice my skills in HTML, CSS and Javascript and stay relevant on financial information so the real question we have to ask ourselves is...WHY NOT?" data-placement="top" data-toggle"popover" href="#" data-original-title="Motivation" data-animation="true" data-trigger="hover">Why?</button>
+    <button class="btn btn-inverse btn-large" id="how" data-content="I combined concepts in HTML, CSS, and Javascript but a big shoutout goes to
+              Twitter's Bootstrap platform, Markit's Data API's and Glyphicons which really allow me to produce a website with great functionality!" data-placement="top" data-toggle"popover" href="#" data-original-title="Tools" data-animation="true" data-trigger="hover">How?</button>
+    </div>
+        </div>
+    </div>
+    </div>
+
+<div class="row" id="main-content"></div>
+<footer class="row"></footer>
+<div id="register" class="modal hide fade" aria-labelledby="modaLabel" area-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></button>
+    <h3 id="modalLabel">Register</h3>
+  </div>
+  <div class="modal-body">
+    <form>
+      <p class="label label-info">Required!</p>
+      <div class="controls controls-row">
+        <input type="text" class="span2" placeholder="First Name">
+        <input type="text" class="span2" placeholder="Last Name">
+        <select class="span1">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+      </div>
+      <div class="controls control-group info">
+        <input type="text" class="span5" placeholder="Username" id="inputinfo">
+        <input type="text" class="span5" placeholder="Email" id="inputinfo">
+        <input type="text" class="span5" placeholder="Confirm Email" id="inputinfo">
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">cancel</button>
+    <button class="btn btn-success">register</button>
+  </div>
+</div>
+<script src="http://code.jquery.com/jquery.js"></script> 
+<script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-40369276-1', 'marginvue.com');
+            ga('send', 'pageview');
+
+            </script> 
+<script src="js/bootstrap.min.js"></script> 
+<script type="text/javascript">
+            $("#tip").tooltip();
+            </script>
+</body>
+</html>
